@@ -28,6 +28,7 @@ public class Employee {
     private Image photo;
 
     public String getName() {
+        
         return name;
     }
 
