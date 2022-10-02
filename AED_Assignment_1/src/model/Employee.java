@@ -16,7 +16,7 @@ import java.awt.image.BufferedImage;
  */
 public class Employee {
     private String name;
-    private long empId;
+    private String empId;
     private int age;
     private String gender;
     private String startDate;
@@ -36,11 +36,11 @@ public class Employee {
         this.name = name;
     }
 
-    public long getEmpId() {
+    public String getEmpId() {
         return empId;
     }
 
-    public void setEmpId(long empId) {
+    public void setEmpId(String empId) {
         this.empId = empId;
     }
 
@@ -116,6 +116,12 @@ public class Employee {
         this.photo = photo;
     }
     
+    
+    @Override
+    public String toString(){
+       return empId;
+        
+    }
     
     
     

@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
 import model.EmployeeRecord;
@@ -15,6 +16,7 @@ import model.EmployeeRecord;
 public class ViewJPanel extends javax.swing.JPanel {
 
     EmployeeRecord employee;
+    
     
     /**
      * Creates new form ViewJPanel
@@ -278,6 +280,11 @@ public class ViewJPanel extends javax.swing.JPanel {
         btnView.setText("View");
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         lblContactInfo1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblContactInfo1.setText("Contact Information:");
@@ -472,6 +479,26 @@ public class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStartDate1ActionPerformed
 
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        int selectedRowIndex = tbtEmployee.getSelectedRow();
+        if (selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this, "Please select a Row to Delete");
+            return;
+        }   
+      
+        DefaultTableModel model = (DefaultTableModel) tbtEmployee.getModel();
+        Employee selectedEmployees = (Employee) model.getValueAt(selectedRowIndex, 0);
+            
+        employee.deleteEmployees(selectedEmployees);
+        JOptionPane.showMessageDialog(this, "Selected Employee Data deleted");
+        
+        populateTable();
+        
+        
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
@@ -535,7 +562,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         for (Employee emp : employee.getEmployee()){
             
             Object[] row = new Object [6];
-            row[0]= emp.getEmpId();
+            row[0]= emp;
             row[1]= emp.getName();
             row[2]= emp.getAge();
             row[3]= emp.getGender();

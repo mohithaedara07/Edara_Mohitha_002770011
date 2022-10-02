@@ -32,6 +32,11 @@ public class EmployeeRecord {
        employee.add(newEmployee);
        return newEmployee;
     }
+
+    public void deleteEmployees(Employee emp) {
+        employee.remove(emp);
+        
+    }
     
     
 }

@@ -262,7 +262,7 @@ public class CreateEmployee extends javax.swing.JPanel {
     private void btnSaveDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveDetailsActionPerformed
 
  String name = txtName.getText();
- long empId = Long.parseLong(txtEmpId.getText());
+ String empId = txtEmpId.getText();
  int age = Integer.parseInt(txtAge.getText());
  String gender = txtGender.getText();
  String startDate = txtStartDate.getText();
