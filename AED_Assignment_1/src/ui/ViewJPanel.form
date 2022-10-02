@@ -280,46 +280,42 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane1" min="-2" pref="771" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblGender1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblAge1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblName1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblEmpId1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblContactInfo1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblContactInfo1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblPhoneNum1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblEmailId1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Group type="102" attributes="0">
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtEmailId1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtPhoneNum1" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lblPosTitle1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblTeamInfo1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblLevel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblStartDate1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblGender1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblAge1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblName1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblEmpId1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtName1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtEmpId1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtAge1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtGender1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtStartDate1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtLevel1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtTeamInfo1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtPosTitle1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <Component id="txtName1" alignment="0" min="-2" pref="213" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                              <Component id="lblPhoneNum1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="lblEmailId1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtEmailId1" min="-2" pref="179" max="-2" attributes="0"/>
+                                          <Component id="txtPhoneNum1" min="-2" pref="179" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
@@ -350,12 +346,17 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblName1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtName1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                              <Component id="lblName1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txtName1" min="-2" pref="23" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblEmpId1" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtEmpId1" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
@@ -375,36 +376,13 @@
                           <Component id="lblGender1" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="txtGender1" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblStartDate1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtStartDate1" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblLevel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtLevel1" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblTeamInfo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTeamInfo1" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblPosTitle1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtPosTitle1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblContactInfo1" min="-2" pref="71" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblPhoneNum1" alignment="1" min="-2" pref="17" max="-2" attributes="0"/>
-                                  <Component id="txtPhoneNum1" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="lblContactInfo1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblPhoneNum1" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                                  <Component id="txtPhoneNum1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -415,7 +393,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="193" max="32767" attributes="0"/>
+              <EmptySpace pref="347" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -495,6 +473,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="View"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnDelete">
       <Properties>
@@ -522,21 +503,10 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAge1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtStartDate1">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStartDate1ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtLevel1">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtTeamInfo1">
-    </Component>
     <Component class="javax.swing.JLabel" name="lblAge1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Age:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtPosTitle1">
     </Component>
     <Component class="javax.swing.JLabel" name="lblGender1">
       <Properties>
@@ -545,27 +515,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtPhoneNum1">
     </Component>
-    <Component class="javax.swing.JLabel" name="lblStartDate1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Start Date:"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="txtEmailId1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblLevel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Level:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblTeamInfo1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Team Info:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblPosTitle1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Position Title:"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtGender1">
     </Component>
