@@ -47,6 +47,11 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         btnView.setText("View Record");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
@@ -108,6 +113,11 @@ public class MainJFrame extends javax.swing.JFrame {
         CreateEmployee createEmployee = new CreateEmployee(employee);
         splitPane.setRightComponent(createEmployee);
     }//GEN-LAST:event_btnNewActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        ViewJPanel viewPanel = new ViewJPanel(employee);
+        splitPane.setRightComponent(viewPanel);// TODO add your handling code here:
+    }//GEN-LAST:event_btnViewActionPerformed
 
     /**
      * @param args the command line arguments
