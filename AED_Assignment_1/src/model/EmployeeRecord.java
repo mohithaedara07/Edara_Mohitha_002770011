@@ -26,7 +26,12 @@ public class EmployeeRecord {
         this.employee = employee;
     }
     
-    
+    public Employee addNewEmployee(){
+        
+        Employee newEmployee = new Employee();
+       employee.add(newEmployee);
+       return newEmployee;
+    }
     
     
 }

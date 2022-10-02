@@ -105,7 +105,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
-        CreateEmployee createEmployee = new CreateEmployee();
+        CreateEmployee createEmployee = new CreateEmployee(employee);
         splitPane.setRightComponent(createEmployee);
     }//GEN-LAST:event_btnNewActionPerformed
 

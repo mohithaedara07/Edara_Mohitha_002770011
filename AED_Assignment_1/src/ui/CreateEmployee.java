@@ -4,18 +4,24 @@
  */
 package ui;
 
+import java.awt.Image;
+import javax.swing.JOptionPane;
+import model.Employee;
+import model.EmployeeRecord;
+
 /**
  *
  * @author mohitha
  */
 public class CreateEmployee extends javax.swing.JPanel {
 
-   
+   EmployeeRecord employee;
     /**
      * Creates new form CreateEmployee
      */
-    public CreateEmployee() {
+    public CreateEmployee(EmployeeRecord employee) {
         initComponents();
+        this.employee = employee;
     }
 
     /**
@@ -110,6 +116,11 @@ public class CreateEmployee extends javax.swing.JPanel {
 
         btnSaveDetails.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnSaveDetails.setText("Save Record");
+        btnSaveDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveDetailsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -247,6 +258,48 @@ public class CreateEmployee extends javax.swing.JPanel {
     private void txtPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhotoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPhotoActionPerformed
+
+    private void btnSaveDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveDetailsActionPerformed
+
+ String name = txtName.getText();
+ long empId = Long.parseLong(txtEmpId.getText());
+ int age = Integer.parseInt(txtAge.getText());
+ String gender = txtGender.getText();
+ String startDate = txtStartDate.getText();
+ String level = txtLevel.getText();
+ String teamInfo = txtTeamInfo.getText();
+ String posTitle = txtPosTitle.getText();
+ long phoneNum = Long.parseLong(txtPhoneNum.getText());
+ String emailId = txtEmailId.getText();
+ 
+   Employee emp = employee.addNewEmployee();
+   emp.setName(name);
+   emp.setAge(age);
+   emp.setEmailId(emailId);
+   emp.setGender(gender);
+   emp.setLevel(level);
+   emp.setPhoneNum(phoneNum);
+   emp.setPosTitle(posTitle);
+   emp.setStartDate(startDate);
+   emp.setTeamInfo(teamInfo);
+   emp.setEmpId(empId);
+   
+   JOptionPane.showMessageDialog(this, "New Employee Record added.");
+   txtName.setText("");
+   txtEmpId.setText("");
+   txtAge.setText("");
+   txtGender.setText("");
+   txtStartDate.setText("");
+   txtLevel.setText("");
+   txtTeamInfo.setText("");
+   txtPosTitle.setText("");
+   txtPhoneNum.setText("");
+   txtPhoneNum.setText("");
+   txtEmailId.setText("");
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSaveDetailsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
