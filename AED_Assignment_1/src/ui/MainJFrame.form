@@ -56,9 +56,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="buttonNew" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnNew" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="buttonView" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnView" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -68,24 +68,24 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="buttonNew" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnNew" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="buttonView" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="485" max="32767" attributes="0"/>
+                      <Component id="btnView" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="671" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="buttonNew">
+            <Component class="javax.swing.JButton" name="btnNew">
               <Properties>
                 <Property name="text" type="java.lang.String" value="New Employee"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNewActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="buttonView">
+            <Component class="javax.swing.JButton" name="btnView">
               <Properties>
                 <Property name="text" type="java.lang.String" value="View Record"/>
               </Properties>
@@ -102,12 +102,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="695" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="865" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="602" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="788" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
