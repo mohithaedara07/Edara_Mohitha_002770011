@@ -269,14 +269,14 @@ public class ViewJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tbtEmployee);
 
-        btnView.setText("View");
+        btnView.setText("View Record");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
             }
         });
 
-        btnDelete.setText("Delete");
+        btnDelete.setText("Delete Record");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -466,12 +466,12 @@ public class ViewJPanel extends javax.swing.JPanel {
       
         DefaultTableModel model = (DefaultTableModel) tbtEmployee.getModel();
         Employee selectedEmployees = (Employee) model.getValueAt(selectedRowIndex, 0);
-        txtEmpId.setText(String.valueOf(selectedEmployees.getEmpId()));
-        txtName.setText(String.valueOf(selectedEmployees.getName()));
-        txtGender.setText(String.valueOf(selectedEmployees.getGender()));
-        txtAge.setText(String.valueOf(selectedEmployees.getAge()));
-        txtPhoneNum.setText(String.valueOf(selectedEmployees.getPhoneNum()));
-        txtEmailId.setText(selectedEmployees.getEmailId());
+        txtEmpId1.setText(String.valueOf(selectedEmployees.getEmpId()));
+        txtName1.setText(String.valueOf(selectedEmployees.getName()));
+        txtGender1.setText(String.valueOf(selectedEmployees.getGender()));
+        txtAge1.setText(String.valueOf(selectedEmployees.getAge()));
+        txtPhoneNum1.setText(String.valueOf(selectedEmployees.getPhoneNum()));
+        txtEmailId1.setText(selectedEmployees.getEmailId());
         
 // TODO add your handling code here:
     }//GEN-LAST:event_btnViewActionPerformed
