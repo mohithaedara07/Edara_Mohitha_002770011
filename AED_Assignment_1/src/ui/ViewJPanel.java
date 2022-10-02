@@ -4,6 +4,10 @@
  */
 package ui;
 
+import java.awt.Image;
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
@@ -18,6 +22,8 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     EmployeeRecord employee;
     private EmployeeRecord Employee;
+    private final JFileChooser PhotoFileChooser;
+    
    
     
     /**
@@ -30,7 +36,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         
         
         populateTable();
-        
+        PhotoFileChooser = new JFileChooser();
     }
 
     /**
@@ -85,9 +91,11 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblEmpId1 = new javax.swing.JLabel();
         lblName1 = new javax.swing.JLabel();
         lblEmailId1 = new javax.swing.JLabel();
-        btnSearch = new javax.swing.JButton();
-        txtSearchText = new javax.swing.JTextField();
         btnSave1 = new javax.swing.JButton();
+        lblPhotoArea = new javax.swing.JLabel();
+        btnAddPhoto = new javax.swing.JButton();
+        txtPhotoArea = new javax.swing.JLabel();
+        lblPhoto1 = new javax.swing.JLabel();
 
         lblName.setText("Name:");
 
@@ -317,19 +325,21 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         lblEmailId1.setText("Email ID:");
 
-        btnSearch.setText("Search");
-        btnSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSearchActionPerformed(evt);
-            }
-        });
-
-        btnSave1.setText("Save");
+        btnSave1.setText("Update");
         btnSave1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSave1ActionPerformed(evt);
             }
         });
+
+        btnAddPhoto.setText("Update Photo");
+        btnAddPhoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddPhotoActionPerformed(evt);
+            }
+        });
+
+        lblPhoto1.setText("Photo:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -344,6 +354,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnView)
+                                        .addGap(149, 149, 149))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(lblGender1)
@@ -363,29 +376,35 @@ public class ViewJPanel extends javax.swing.JPanel {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(txtEmailId1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtPhoneNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                    .addComponent(txtPhoneNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addComponent(txtEmpId1)
                                                     .addComponent(txtAge1)
                                                     .addComponent(txtGender1)
-                                                    .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(196, 196, 196)))
+                                                    .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                                 .addGap(62, 62, 62))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnView)
-                                .addGap(88, 88, 88)
-                                .addComponent(btnDelete))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(540, 540, 540)
-                        .addComponent(txtSearchText, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSearch)))
+                            .addComponent(btnDelete, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(546, 546, 546)
+                        .addComponent(lblPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(14, 14, 14))
             .addGroup(layout.createSequentialGroup()
-                .addGap(338, 338, 338)
-                .addComponent(btnSave1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(311, 311, 311)
+                        .addComponent(btnSave1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(lblPhoto1)
+                        .addGap(82, 82, 82)
+                        .addComponent(btnAddPhoto)
+                        .addGap(33, 33, 33)
+                        .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -395,6 +414,8 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addComponent(lblNewEmpDetails)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnView)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(83, 83, 83)
@@ -427,18 +448,19 @@ public class ViewJPanel extends javax.swing.JPanel {
                                     .addComponent(txtEmailId1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnView)
-                            .addComponent(btnDelete))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSearchText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSearch))
-                        .addGap(4, 4, 4)
-                        .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
+                        .addComponent(btnDelete)
+                        .addGap(45, 45, 45)
+                        .addComponent(txtName1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAddPhoto)
+                    .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPhoto1))
+                .addGap(75, 75, 75)
                 .addComponent(btnSave1)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addGap(152, 152, 152))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -508,18 +530,24 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtPhoneNum1.setText(String.valueOf(selectedEmployees.getPhoneNum()));
         txtEmailId1.setText(selectedEmployees.getEmailId());
         
+         ImageIcon imageIcon = new ImageIcon(selectedEmployees.getPhoto());
+        if(imageIcon != null){
+            Image img = imageIcon.getImage();
+            Image newimg = img.getScaledInstance(150,150,java.awt.Image.SCALE_SMOOTH);
+            //Image newimg = img.getScaledInstance(lbl_pic.getWidth(), lbl_pic.getHeight(),  java.awt.Image.SCALE_SMOOTH);
+            imageIcon = new ImageIcon(newimg);
+            lblPhotoArea.setIcon(imageIcon);
+            lblPhotoArea.setText(null);
+        }
+        else{
+            lblPhotoArea.setText("Image not found");
+        }
+        
 // TODO add your handling code here:
     }//GEN-LAST:event_btnViewActionPerformed
 
    
-    
-    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO add your handling code here:
-        SearchJPanel searchPanel = new SearchJPanel(Employee);
-        
-        
-    }//GEN-LAST:event_btnSearchActionPerformed
-
+    /**/
     private void btnSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave1ActionPerformed
         // TODO add your handling code here:
         
@@ -530,8 +558,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         empl.setGender(txtGender1.getText());
         empl.setPhoneNum(Long.parseLong(txtPhoneNum1.getText()));
         empl.setEmailId(txtEmailId1.getText());
+        empl.setPhoto(txtPhotoArea.getText());
         
-        JOptionPane.showMessageDialog(this, "New Employee Profile Added Successfully!");
+        JOptionPane.showMessageDialog(this, "New Employee Details Updated Successfully!");
 
         txtName1.setText("");
         txtEmpId1.setText("");
@@ -539,6 +568,8 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtGender1.setText("");
         txtPhoneNum1.setText("");
         txtEmailId1.setText("");
+        txtPhotoArea.setText("");
+        
         
         
         int selectedRowIndex = tbtEmployee.getSelectedRow();
@@ -547,15 +578,30 @@ public class ViewJPanel extends javax.swing.JPanel {
          employee.deleteEmployees(selectedProfile);
          populateTable();
     }//GEN-LAST:event_btnSave1ActionPerformed
+
+    private void btnAddPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPhotoActionPerformed
+
+
+  PhotoFileChooser.setCurrentDirectory(new File("/Users/Desktop/images"));
+        int Value = PhotoFileChooser.showOpenDialog(this);
+        if(Value==JFileChooser.APPROVE_OPTION){
+           txtPhotoArea.setText( PhotoFileChooser.getSelectedFile().toString());
+
+        }
+        else{
+            txtPhotoArea.setText("No File Selected");
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddPhotoActionPerformed
 /*
 */
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddPhoto;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnSave1;
     private javax.swing.JButton btnSaveDetails;
-    private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnView;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -576,6 +622,8 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPhoneNum;
     private javax.swing.JLabel lblPhoneNum1;
     private javax.swing.JLabel lblPhoto;
+    private javax.swing.JLabel lblPhoto1;
+    private javax.swing.JLabel lblPhotoArea;
     private javax.swing.JLabel lblPosTitle;
     private javax.swing.JLabel lblStartDate;
     private javax.swing.JLabel lblTeamInfo;
@@ -594,8 +642,8 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtPhoneNum;
     private javax.swing.JTextField txtPhoneNum1;
     private javax.swing.JTextField txtPhoto;
+    private javax.swing.JLabel txtPhotoArea;
     private javax.swing.JTextField txtPosTitle;
-    private javax.swing.JTextField txtSearchText;
     private javax.swing.JTextField txtStartDate;
     private javax.swing.JTextField txtTeamInfo;
     // End of variables declaration//GEN-END:variables

@@ -25,7 +25,7 @@ public class Employee {
     private String posTitle;
     private long phoneNum;
     private String emailId;
-    private Image photo;
+    private String photo;
 
     public String getName() {
         
@@ -108,11 +108,11 @@ public class Employee {
         this.emailId = emailId;
     }
 
-    public Image getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Image photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
     

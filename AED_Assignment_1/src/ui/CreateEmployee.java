@@ -5,6 +5,8 @@
 package ui;
 
 import java.awt.Image;
+import java.io.File;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import model.Employee;
 import model.EmployeeRecord;
@@ -16,12 +18,14 @@ import model.EmployeeRecord;
 public class CreateEmployee extends javax.swing.JPanel {
 
    EmployeeRecord employee;
+   private final JFileChooser PhotoFileChooser;
     /**
      * Creates new form CreateEmployee
      */
     public CreateEmployee(EmployeeRecord employee) {
         initComponents();
         this.employee = employee;
+        PhotoFileChooser = new JFileChooser();
     }
 
     /**
@@ -56,8 +60,9 @@ public class CreateEmployee extends javax.swing.JPanel {
         txtPhoneNum = new javax.swing.JTextField();
         txtEmailId = new javax.swing.JTextField();
         txtGender = new javax.swing.JTextField();
-        txtPhoto = new javax.swing.JTextField();
         btnSaveDetails = new javax.swing.JButton();
+        btnAddPhoto = new javax.swing.JButton();
+        txtPhotoArea = new javax.swing.JLabel();
 
         lblNewEmpDetails.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblNewEmpDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -108,17 +113,18 @@ public class CreateEmployee extends javax.swing.JPanel {
             }
         });
 
-        txtPhoto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPhotoActionPerformed(evt);
-            }
-        });
-
         btnSaveDetails.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnSaveDetails.setText("Save Record");
         btnSaveDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveDetailsActionPerformed(evt);
+            }
+        });
+
+        btnAddPhoto.setText("Add Photo");
+        btnAddPhoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddPhotoActionPerformed(evt);
             }
         });
 
@@ -142,16 +148,19 @@ public class CreateEmployee extends javax.swing.JPanel {
                                         .addContainerGap()
                                         .addComponent(lblPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(9, 9, 9)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblPhoneNum)
-                                        .addComponent(lblEmailId))
-                                    .addComponent(txtPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtEmailId, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                                    .addComponent(txtPhoneNum)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(34, 34, 34)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblPhoneNum)
+                                            .addComponent(lblEmailId))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtEmailId, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                                            .addComponent(txtPhoneNum)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(btnAddPhoto))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(122, 122, 122)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -172,13 +181,16 @@ public class CreateEmployee extends javax.swing.JPanel {
                                     .addComponent(txtStartDate)
                                     .addComponent(txtLevel)
                                     .addComponent(txtTeamInfo)
-                                    .addComponent(txtPosTitle))))
+                                    .addComponent(txtPosTitle)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(303, 303, 303)
+                                    .addComponent(btnSaveDetails))))
                         .addGap(0, 217, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(303, 303, 303)
-                .addComponent(btnSaveDetails)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,11 +245,12 @@ public class CreateEmployee extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblEmailId)
                             .addComponent(txtEmailId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(33, 33, 33)
+                .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPhoto))
-                .addGap(42, 42, 42)
+                    .addComponent(lblPhoto)
+                    .addComponent(btnAddPhoto)
+                    .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(85, 85, 85)
                 .addComponent(btnSaveDetails)
                 .addContainerGap(51, Short.MAX_VALUE))
         );
@@ -255,10 +268,6 @@ public class CreateEmployee extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStartDateActionPerformed
 
-    private void txtPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhotoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPhotoActionPerformed
-
     private void btnSaveDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveDetailsActionPerformed
 
  String name = txtName.getText();
@@ -271,6 +280,8 @@ public class CreateEmployee extends javax.swing.JPanel {
  String posTitle = txtPosTitle.getText();
  long phoneNum = Long.parseLong(txtPhoneNum.getText());
  String emailId = txtEmailId.getText();
+ String photo = txtPhotoArea.getText();
+ 
  
    Employee emp = employee.addNewEmployee();
    emp.setName(name);
@@ -283,6 +294,7 @@ public class CreateEmployee extends javax.swing.JPanel {
    emp.setStartDate(startDate);
    emp.setTeamInfo(teamInfo);
    emp.setEmpId(empId);
+   emp.setPhoto(photo);
    
    JOptionPane.showMessageDialog(this, "New Employee Record added.");
    txtName.setText("");
@@ -296,13 +308,29 @@ public class CreateEmployee extends javax.swing.JPanel {
    txtPhoneNum.setText("");
    txtPhoneNum.setText("");
    txtEmailId.setText("");
-
+   txtPhotoArea.setText("");
+   
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSaveDetailsActionPerformed
 
+    private void btnAddPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPhotoActionPerformed
+
+        PhotoFileChooser.setCurrentDirectory(new File("/Users/Desktop/images"));
+        int Value = PhotoFileChooser.showOpenDialog(this);
+        if(Value==JFileChooser.APPROVE_OPTION){
+            txtPhotoArea.setText( PhotoFileChooser.getSelectedFile().toString());
+
+        }
+        else{
+            txtPhotoArea.setText("No File Selected");
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddPhotoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddPhoto;
     private javax.swing.JButton btnSaveDetails;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblContactInfo;
@@ -324,7 +352,7 @@ public class CreateEmployee extends javax.swing.JPanel {
     private javax.swing.JTextField txtLevel;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhoneNum;
-    private javax.swing.JTextField txtPhoto;
+    private javax.swing.JLabel txtPhotoArea;
     private javax.swing.JTextField txtPosTitle;
     private javax.swing.JTextField txtStartDate;
     private javax.swing.JTextField txtTeamInfo;
