@@ -526,7 +526,7 @@
     <Component class="javax.swing.JLabel" name="lblContactInfo1">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Contact Information:"/>
+        <Property name="text" type="java.lang.String" value="Contact Info:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtName1">

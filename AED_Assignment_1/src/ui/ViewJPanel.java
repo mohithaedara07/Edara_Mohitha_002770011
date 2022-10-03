@@ -303,7 +303,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
 
         lblContactInfo1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblContactInfo1.setText("Contact Information:");
+        lblContactInfo1.setText("Contact Info:");
 
         txtName1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
