@@ -37,9 +37,15 @@ public class MainJFrame extends javax.swing.JFrame {
         btnView = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        controlPanel.setBackground(new java.awt.Color(242, 242, 99));
+
+        btnNew.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        btnNew.setForeground(new java.awt.Color(0, 102, 0));
         btnNew.setText("New Employee");
         btnNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +53,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnView.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        btnView.setForeground(new java.awt.Color(0, 102, 0));
         btnView.setText("View Record");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +62,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnSearch.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(0, 102, 0));
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,37 +75,54 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
+            .addComponent(btnSearch, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnNew, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                    .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                 .addContainerGap())
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(101, 101, 101)
                 .addComponent(btnNew, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addComponent(btnView)
-                .addGap(20, 20, 20)
+                .addGap(194, 194, 194)
                 .addComponent(btnSearch)
-                .addContainerGap(622, Short.MAX_VALUE))
+                .addGap(217, 217, 217))
         );
 
         splitPane.setLeftComponent(controlPanel);
+
+        workArea.setBackground(new java.awt.Color(120, 58, 122));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(javax.swing.UIManager.getDefaults().getColor("Component.error.borderColor"));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Khmer MN", 1, 24)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(153, 51, 0));
+        jTextArea1.setRows(5);
+        jTextArea1.setText("        Employee Data Record Java Swing Application\n          \t        AED Assignment 1\n\t");
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 835, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workAreaLayout.createSequentialGroup()
+                .addContainerGap(124, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116))
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 788, Short.MAX_VALUE)
+            .addGroup(workAreaLayout.createSequentialGroup()
+                .addGap(288, 288, 288)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(363, Short.MAX_VALUE))
         );
 
         splitPane.setRightComponent(workArea);
@@ -181,6 +208,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnView;
     private javax.swing.JPanel controlPanel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables

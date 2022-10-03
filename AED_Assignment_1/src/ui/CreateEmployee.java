@@ -64,7 +64,10 @@ public class CreateEmployee extends javax.swing.JPanel {
         btnAddPhoto = new javax.swing.JButton();
         txtPhotoArea = new javax.swing.JLabel();
 
-        lblNewEmpDetails.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        setBackground(new java.awt.Color(226, 237, 211));
+
+        lblNewEmpDetails.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblNewEmpDetails.setForeground(new java.awt.Color(0, 90, 99));
         lblNewEmpDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNewEmpDetails.setText("New Employee Details");
         lblNewEmpDetails.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -185,10 +188,10 @@ public class CreateEmployee extends javax.swing.JPanel {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addContainerGap()
-                                    .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnSaveDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(303, 303, 303)
-                                    .addComponent(btnSaveDetails))))
+                                    .addGap(327, 327, 327)
+                                    .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 217, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -250,8 +253,8 @@ public class CreateEmployee extends javax.swing.JPanel {
                     .addComponent(lblPhoto)
                     .addComponent(btnAddPhoto)
                     .addComponent(txtPhotoArea, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(85, 85, 85)
-                .addComponent(btnSaveDetails)
+                .addGap(68, 68, 68)
+                .addComponent(btnSaveDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(51, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
