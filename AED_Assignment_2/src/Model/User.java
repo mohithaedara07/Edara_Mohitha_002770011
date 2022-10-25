@@ -20,9 +20,24 @@ public class User {
     private int height;
     private String userName;
     private String password;
-   // private String Gender;
-    //private String Roles;
-    //private rolecomboboxx < String > box;
+   private String specialization;
+   private String hospitalName;
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public String getHospitalName() {
+        return hospitalName;
+    }
+
+    public void setHospitalName(String hospitalName) {
+        this.hospitalName = hospitalName;
+    }
 
     public void setHeight(int height) {
         this.height = height;

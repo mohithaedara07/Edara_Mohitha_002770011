@@ -28,10 +28,23 @@ public class SignUp extends javax.swing.JPanel {
     private int age;
     private int weight;
     private int height;
+    private String specializaton;
+    private String hospitalName;
+    
     
     public SignUp(UserRecord user) {
         initComponents();
         this.user = user;
+         lblAge.setVisible(false);
+        txtAge.setVisible(false);
+        lblWeight.setVisible(false);
+        txtWeight.setVisible(false);
+        lblHeight.setVisible(false);
+        txtHeight.setVisible(false);
+        lblSpecialization.setVisible(false);
+        txtSpecialization.setVisible(false);
+        lblHospitalName.setVisible(false);
+        txtHospitalName.setVisible(false);
         
     }
 
@@ -62,6 +75,16 @@ public class SignUp extends javax.swing.JPanel {
         selcUserType = new javax.swing.JComboBox<>();
         selcGender = new javax.swing.JComboBox<>();
         btnSignUp = new javax.swing.JButton();
+        lblAge = new javax.swing.JLabel();
+        lblWeight = new javax.swing.JLabel();
+        lblHeight = new javax.swing.JLabel();
+        lblSpecialization = new javax.swing.JLabel();
+        lblHospitalName = new javax.swing.JLabel();
+        txtAge = new javax.swing.JTextField();
+        txtWeight = new javax.swing.JTextField();
+        txtHeight = new javax.swing.JTextField();
+        txtSpecialization = new javax.swing.JTextField();
+        txtHospitalName = new javax.swing.JTextField();
 
         lblSignUp.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblSignUp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,7 +107,12 @@ public class SignUp extends javax.swing.JPanel {
 
         jLabel8.setText("User Type:");
 
-        selcUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\"Choose your category\"", "Paitent", "Doctor" }));
+        selcUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\"Choose your category\"", "Patient", "Doctor" }));
+        selcUserType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selcUserTypeActionPerformed(evt);
+            }
+        });
 
         selcGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\"Choose your gender\"", "Male", "Female" }));
 
@@ -95,49 +123,78 @@ public class SignUp extends javax.swing.JPanel {
             }
         });
 
+        lblAge.setText("Age:");
+
+        lblWeight.setText("Weight:");
+
+        lblHeight.setText("Height:");
+
+        lblSpecialization.setText("Specialization:");
+
+        lblHospitalName.setText("Hospital name:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 20, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblPhoneNum)
-                            .addComponent(lblGender)
-                            .addComponent(lblEmailId))
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtEmailId)
-                            .addComponent(txtPhoneNum)
-                            .addComponent(selcGender, 0, 186, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblName)
-                        .addGap(53, 53, 53)
-                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(84, 84, 84)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addGap(52, 52, 52)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(selcUserType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 136, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblName)
+                                .addGap(53, 53, 53)
+                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblPhoneNum)
+                                    .addComponent(lblGender)
+                                    .addComponent(lblEmailId))
+                                .addGap(53, 53, 53)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtEmailId)
+                                        .addComponent(txtPhoneNum)
+                                        .addComponent(selcGender, 0, 186, Short.MAX_VALUE))
+                                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(84, 84, 84)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addGap(52, 52, 52))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblWeight)
+                            .addComponent(lblAge)
+                            .addComponent(lblHeight))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSpecialization, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblHospitalName, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(63, 63, 63)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtCity)
+                    .addComponent(txtCommunity)
+                    .addComponent(txtHouse)
+                    .addComponent(selcUserType, 0, 186, Short.MAX_VALUE)
+                    .addComponent(txtHospitalName)
+                    .addComponent(txtSpecialization))
                 .addGap(58, 58, 58))
             .addGroup(layout.createSequentialGroup()
-                .addGap(274, 274, 274)
-                .addComponent(lblSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(274, 274, 274)
+                        .addComponent(lblSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(421, 421, 421)
+                        .addComponent(btnSignUp)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSignUp)
-                .addGap(358, 358, 358))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,25 +225,46 @@ public class SignUp extends javax.swing.JPanel {
                     .addComponent(selcUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblGender)
                     .addComponent(selcGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAge)
+                    .addComponent(lblSpecialization)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSpecialization, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblWeight)
+                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHospitalName)
+                    .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHeight)
+                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
                 .addComponent(btnSignUp)
-                .addGap(112, 112, 112))
+                .addGap(60, 60, 60))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
 try{
   name = txtName.getText();
- cellPhoneNumber = Long.parseLong(txtPhoneNum.getText());
+  cellPhoneNumber = Long.parseLong(txtPhoneNum.getText());
   emailAddress = txtEmailId.getText();
   city = txtCity.getText();
   community = txtCommunity.getText();
    houseNumber = Integer.parseInt(txtHouse.getText());
-}
-catch(Exception ex){
-            JOptionPane.showMessageDialog(this, "Please enter all values and try again");
-    
-}
+   age = Integer.parseInt(txtAge.getText());
+   weight = Integer.parseInt(txtWeight.getText());
+   height = Integer.parseInt(txtHeight.getText());
+   specializaton = txtSpecialization.getText();
+   hospitalName = txtHospitalName.getText(); 
+   System.out.print(name+cellPhoneNumber);
+
+
+
+
 if(isValidInput()){
     User usr = user.addNewUser();
     usr.setName(name);
@@ -195,6 +273,13 @@ if(isValidInput()){
     usr.setCity(city);
     usr.setCommunity(community);
     usr.setHouseNumber(houseNumber);
+    usr.setAge(age);
+    usr.setWeight(weight);
+    usr.setHeight(height);
+    usr.setSpecialization(specializaton);
+    usr.setHospitalName(hospitalName);
+    
+    
     
     JOptionPane.showMessageDialog(this, "New User has been registered.");
     txtName.setText("");
@@ -203,10 +288,65 @@ if(isValidInput()){
     txtCity.setText("");
     txtCommunity.setText("");
     txtHouse.setText("");
+    txtAge.setText("");
+    txtWeight.setText("");
+    txtHeight.setText("");
+    txtSpecialization.setText("");
+    txtHospitalName.setText("");
+}
 }
 
+
+catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Please enter all values and try again");
+    
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSignUpActionPerformed
+
+    private void selcUserTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selcUserTypeActionPerformed
+      Object selectedItem = selcUserType.getSelectedItem();
+      if((selectedItem.toString().equalsIgnoreCase("Patient")))
+      {
+                        lblAge.setVisible(true);
+                        txtAge.setVisible(true);
+                        lblWeight.setVisible(true);
+                        txtWeight.setVisible(true);
+                        lblHeight.setVisible(true);
+                        txtHeight.setVisible(true);
+        lblSpecialization.setVisible(false);
+        txtSpecialization.setVisible(false);
+        lblHospitalName.setVisible(false);
+        txtHospitalName.setVisible(false);
+      }
+       else if((selectedItem.toString().equalsIgnoreCase("Doctor")))
+       {
+                        lblAge.setVisible(false);
+                        txtAge.setVisible(false);
+                        lblWeight.setVisible(false);
+                        txtWeight.setVisible(false);
+                        lblHeight.setVisible(false);
+                        txtHeight.setVisible(false);
+        lblSpecialization.setVisible(true);
+        txtSpecialization.setVisible(true);
+        lblHospitalName.setVisible(true);
+        txtHospitalName.setVisible(true);
+       }
+       else{
+           lblAge.setVisible(false);
+                        txtAge.setVisible(false);
+                        lblWeight.setVisible(false);
+                        txtWeight.setVisible(false);
+                        lblHeight.setVisible(false);
+                        txtHeight.setVisible(false);
+        lblSpecialization.setVisible(false);
+        txtSpecialization.setVisible(false);
+        lblHospitalName.setVisible(false);
+        txtHospitalName.setVisible(false);
+       }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selcUserTypeActionPerformed
  private boolean isValidInput() {
         ArrayList message = null;
         message = new ArrayList(0);
@@ -218,7 +358,7 @@ if(isValidInput()){
             message.add("Please enter a valid 10 digit Phone No and try again");
         }
         
-        if(emailAddress!= null && (emailAddress.isBlank() || !(emailAddress.matches("^[A-Za-z0-9+_.-]+@(.+)$")) || !(emailAddress.contains("@"))||!(emailAddress.endsWith(".com")))){
+        if(emailAddress.isBlank()  || !(emailAddress.matches("^[A-Za-z0-9+_.-]+@(.+)$")) || !(emailAddress.contains("@"))||!(emailAddress.endsWith(".com"))){
             message.add("Please enter a valid Email Address and try again");
         }
         
@@ -229,6 +369,26 @@ if(isValidInput()){
         if (community.isBlank() || !(community.matches("^[a-zA-Z]*$"))){
             message.add("Community cannot be blank, contain digits or special characters. Please enter a valid name and try again");
         }
+        if(selcUserType.getSelectedItem()=="Patient"){
+        if(age < 0 || age > 99){
+            message.add("Please enter a valid Age (0-99) and try again");
+        }
+        }
+        else if (selcUserType.getSelectedItem() == "Doctor"){
+            
+        
+        if (specializaton.isBlank() || !(specializaton.matches("^[a-zA-Z]*$"))){
+            message.add("Specializaton cannot be blank. Please enter a valid name and try again");
+        }
+         if (hospitalName.isBlank() || !(hospitalName.matches("^[a-zA-Z]*$"))){
+            message.add("Hospital Name cannot be blank. Please enter a valid name and try again");
+        }
+        }
+        else
+        {
+            message.add("Please choose a role");
+        }
+         
         if(!(message.isEmpty())){
             JOptionPane.showMessageDialog(this, message.toArray());
             message.clear();
@@ -249,19 +409,29 @@ if(isValidInput()){
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEmailId;
     private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblHeight;
+    private javax.swing.JLabel lblHospitalName;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhoneNum;
     private javax.swing.JLabel lblSignUp;
+    private javax.swing.JLabel lblSpecialization;
+    private javax.swing.JLabel lblWeight;
     private javax.swing.JComboBox<String> selcGender;
     private javax.swing.JComboBox<String> selcUserType;
+    private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtCommunity;
     private javax.swing.JTextField txtEmailId;
+    private javax.swing.JTextField txtHeight;
+    private javax.swing.JTextField txtHospitalName;
     private javax.swing.JTextField txtHouse;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhoneNum;
+    private javax.swing.JTextField txtSpecialization;
+    private javax.swing.JTextField txtWeight;
     // End of variables declaration//GEN-END:variables
 
    
