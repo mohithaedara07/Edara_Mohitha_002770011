@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/EncounterDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/SystemAdminDashboardJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/PatientDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/House.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreateJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/ViewHospitalJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreateHouseJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Patient.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CommunityAdminDashboardJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/ViewPatientJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/ViewDoctorJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/ContactInfo.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/EmployeeProfileHistory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Doctor.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Community.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Encounter.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/CityDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Hospital.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/HouseDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/City.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/ViewCityJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/VitalSigns.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/DoctorDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/CommunityDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreateCityJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/EmployeeProfile.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/MainJFrame.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/HospitalDirectory.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreateDoctorJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/ViewJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/PatientJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Person.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/model/Admin.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/HospitalAdminDashboardJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreateCommunityJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreateHospitalJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/SearchJPanel.java</file>
+            <file>file:/Users/vigy/NetBeansProjects/Human_Resource_Officer/src/ui/CreatePatientJPanel.java</file>
+        </group>
+    </open-files>
+</project-private>
