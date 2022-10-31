@@ -101,8 +101,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtCommunityName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtCityName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="txtCommunityNameForHospital" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="txtCityNameForHospital" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="471" max="32767" attributes="0"/>
                               </Group>
@@ -134,12 +134,12 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCityName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCityNameForHospital" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="employeeId" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCommunityName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCommunityNameForHospital" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="453" max="32767" attributes="0"/>
                       </Group>
@@ -167,9 +167,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCityName">
+            <Component class="javax.swing.JTextField" name="txtCityNameForHospital">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCityNameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCityNameForHospitalActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="name">
@@ -185,9 +185,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCommunityName">
+            <Component class="javax.swing.JTextField" name="txtCommunityNameForHospital">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCommunityNameActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCommunityNameForHospitalActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="createEmployeeLabel">

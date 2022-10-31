@@ -54,22 +54,22 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="emailAddress" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtEmailAddress" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="txtPatientEmail" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="cellPhoneNumber" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtCellPhoneNumber" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="txtPatientContact" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="employeeId1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtPassword" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="txtPatientPassword" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="emailAddress1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtDisease" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="txtPatientDisease" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -112,8 +112,8 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtUsername" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Component id="txtName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtPatientUserName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtPatientName" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="471" max="32767" attributes="0"/>
                           </Group>
@@ -129,7 +129,7 @@
                   <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="employeeId1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPatientPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -144,17 +144,17 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="cellPhoneNumber" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCellPhoneNumber" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPatientContact" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="emailAddress" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtEmailAddress" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPatientEmail" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Component id="emailAddress1" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtDisease" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPatientDisease" alignment="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -170,12 +170,12 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPatientName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="employeeId" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtUsername" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPatientUserName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="453" max="32767" attributes="0"/>
                   </Group>
@@ -210,9 +210,9 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtName">
+        <Component class="javax.swing.JTextField" name="txtPatientName">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPatientNameActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="name">
@@ -238,14 +238,14 @@
             <Property name="text" type="java.lang.String" value="Email Address:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtEmailAddress">
+        <Component class="javax.swing.JTextField" name="txtPatientEmail">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailAddressActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPatientEmailActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtUsername">
+        <Component class="javax.swing.JTextField" name="txtPatientUserName">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsernameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPatientUserNameActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="createEmployeeLabel">
@@ -264,9 +264,9 @@
             <Property name="toolTipText" type="java.lang.String" value="To create new employee"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCellPhoneNumber">
+        <Component class="javax.swing.JTextField" name="txtPatientContact">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCellPhoneNumberActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPatientContactActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="drpGender">
@@ -293,9 +293,9 @@
             <Property name="text" type="java.lang.String" value="Cell Phone Number:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtPassword">
+        <Component class="javax.swing.JTextField" name="txtPatientPassword">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPasswordActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPatientPasswordActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="employeeId1">
@@ -303,9 +303,9 @@
             <Property name="text" type="java.lang.String" value="Password:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtDisease">
+        <Component class="javax.swing.JTextField" name="txtPatientDisease">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDiseaseActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPatientDiseaseActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="emailAddress1">

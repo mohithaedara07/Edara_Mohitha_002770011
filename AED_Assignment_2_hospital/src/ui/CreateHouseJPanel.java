@@ -38,7 +38,7 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         splitWorkspace = new javax.swing.JPanel();
         save = new javax.swing.JButton();
-        txtCityName = new javax.swing.JTextField();
+        txtCityNameForHouse = new javax.swing.JTextField();
         name = new javax.swing.JLabel();
         reset = new javax.swing.JButton();
         createEmployeeLabel = new javax.swing.JLabel();
@@ -49,13 +49,13 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         txtUpdateCityName = new javax.swing.JTextField();
         btnUpdate = new javax.swing.JButton();
         createEmployeeLabel1 = new javax.swing.JLabel();
-        txtCommunityName = new javax.swing.JTextField();
+        txtCommunityNameForHouse = new javax.swing.JTextField();
         name2 = new javax.swing.JLabel();
         name3 = new javax.swing.JLabel();
         txtUpdateCommunityName = new javax.swing.JTextField();
-        txtHouseNumber = new javax.swing.JTextField();
+        txtHouseNumberForHouse = new javax.swing.JTextField();
         name4 = new javax.swing.JLabel();
-        txtStreetName = new javax.swing.JTextField();
+        txtStreetNameForHouse = new javax.swing.JTextField();
         name6 = new javax.swing.JLabel();
         name7 = new javax.swing.JLabel();
         txtUpdateHouseNumber = new javax.swing.JTextField();
@@ -73,9 +73,9 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtCityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCityNameForHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityNameActionPerformed(evt);
+                txtCityNameForHouseActionPerformed(evt);
             }
         });
 
@@ -161,9 +161,9 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         createEmployeeLabel1.setText("View and Update House");
         createEmployeeLabel1.setToolTipText("To create new employee");
 
-        txtCommunityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCommunityNameForHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCommunityNameActionPerformed(evt);
+                txtCommunityNameForHouseActionPerformed(evt);
             }
         });
 
@@ -177,17 +177,17 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtHouseNumber.addActionListener(new java.awt.event.ActionListener() {
+        txtHouseNumberForHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHouseNumberActionPerformed(evt);
+                txtHouseNumberForHouseActionPerformed(evt);
             }
         });
 
         name4.setText("House Number:");
 
-        txtStreetName.addActionListener(new java.awt.event.ActionListener() {
+        txtStreetNameForHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStreetNameActionPerformed(evt);
+                txtStreetNameForHouseActionPerformed(evt);
             }
         });
 
@@ -253,19 +253,19 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(name6)
                         .addGap(18, 18, 18)
-                        .addComponent(txtStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtStreetNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(name4)
                         .addGap(18, 18, 18)
-                        .addComponent(txtHouseNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtHouseNumberForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(name)
                         .addGap(18, 18, 18)
-                        .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(name2)
                         .addGap(18, 18, 18)
-                        .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCommunityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(reset)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -282,20 +282,20 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(name))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name2)
-                    .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCommunityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name4)
-                    .addComponent(txtHouseNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHouseNumberForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name6)
-                    .addComponent(txtStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtStreetNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(save)
@@ -398,43 +398,49 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
 
-        //Reset validation
-        //        valName.setText("");
-        //        valEmployeeId.setText("");
-        //        valDate.setText("");
-        //        valTeamInfo.setText("");
-        //        valCellPhoneNumber.setText("");
-        //        valEmailAddress.setText("");
-        //        valPhoto.setText("");
-        //        if(validation()){
-        String cityName = txtCityName.getText();
-        String communityName = txtCommunityName.getText();
-        int houseNumber = Integer.parseInt(txtHouseNumber.getText());
-        String streetName = txtStreetName.getText();
+        
+        String cityName = txtCityNameForHouse.getText();
+        String communityName = txtCommunityNameForHouse.getText();
+        int houseNumber = Integer.parseInt(txtHouseNumberForHouse.getText());
+        String streetName = txtStreetNameForHouse.getText();
 
         House c = new House(streetName, houseNumber, communityName, cityName);
         houseDirectory.add(c);
 
-        JOptionPane.showMessageDialog(this, "New House Details was created ! ");
+        if (txtCityNameForHouse.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Enter City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else if(txtCommunityNameForHouse.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Fill Community Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else if(txtHouseNumberForHouse.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Enter House Number" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else if(txtStreetNameForHouse.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Enter House Number" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+                JOptionPane.showMessageDialog(this, "New House Details was created ! ");
+        }
         populateTable();
-        txtCityName.setText("");
-        txtCommunityName.setText("");
-        txtHouseNumber.setText("");
-        txtStreetName.setText("");
+        txtCityNameForHouse.setText("");
+        txtCommunityNameForHouse.setText("");
+        txtHouseNumberForHouse.setText("");
+        txtStreetNameForHouse.setText("");
 
         //    }
     }//GEN-LAST:event_saveActionPerformed
 
-    private void txtCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameActionPerformed
+    private void txtCityNameForHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameForHouseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityNameActionPerformed
+    }//GEN-LAST:event_txtCityNameForHouseActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
-        txtCityName.setText("");
-        txtCommunityName.setText("");
-        txtHouseNumber.setText("");
-        txtStreetName.setText("");
+        txtCityNameForHouse.setText("");
+        txtCommunityNameForHouse.setText("");
+        txtHouseNumberForHouse.setText("");
+        txtStreetNameForHouse.setText("");
 
         //Reset validation
         //        valName.setText("");
@@ -479,7 +485,7 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
 
         String cityName = txtUpdateCityName.getText();
         String communityName = txtUpdateCommunityName.getText();
-        String streetName = txtStreetName.getText();
+        String streetName = txtStreetNameForHouse.getText();
         int houseNumber = Integer.parseInt(txtUpdateHouseNumber.getText());
 
         House temp = new House(streetName, houseNumber, communityName, cityName);
@@ -493,21 +499,21 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         txtUpdateCityName.setText("");
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void txtCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameActionPerformed
+    private void txtCommunityNameForHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameForHouseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCommunityNameActionPerformed
+    }//GEN-LAST:event_txtCommunityNameForHouseActionPerformed
 
     private void txtUpdateCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateCommunityNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUpdateCommunityNameActionPerformed
 
-    private void txtHouseNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHouseNumberActionPerformed
+    private void txtHouseNumberForHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHouseNumberForHouseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtHouseNumberActionPerformed
+    }//GEN-LAST:event_txtHouseNumberForHouseActionPerformed
 
-    private void txtStreetNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStreetNameActionPerformed
+    private void txtStreetNameForHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStreetNameForHouseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtStreetNameActionPerformed
+    }//GEN-LAST:event_txtStreetNameForHouseActionPerformed
 
     private void txtUpdateHouseNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateHouseNumberActionPerformed
         // TODO add your handling code here:
@@ -552,10 +558,10 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
     private javax.swing.JButton save;
     private javax.swing.JPanel splitWorkspace;
     private javax.swing.JTable tblEmployeeHistory;
-    private javax.swing.JTextField txtCityName;
-    private javax.swing.JTextField txtCommunityName;
-    private javax.swing.JTextField txtHouseNumber;
-    private javax.swing.JTextField txtStreetName;
+    private javax.swing.JTextField txtCityNameForHouse;
+    private javax.swing.JTextField txtCommunityNameForHouse;
+    private javax.swing.JTextField txtHouseNumberForHouse;
+    private javax.swing.JTextField txtStreetNameForHouse;
     private javax.swing.JTextField txtUpdateCityName;
     private javax.swing.JTextField txtUpdateCommunityName;
     private javax.swing.JTextField txtUpdateHouseNumber;

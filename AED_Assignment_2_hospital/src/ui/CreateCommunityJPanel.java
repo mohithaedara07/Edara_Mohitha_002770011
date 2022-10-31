@@ -37,7 +37,7 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         splitWorkspace = new javax.swing.JPanel();
         save = new javax.swing.JButton();
-        txtCityName = new javax.swing.JTextField();
+        txtCityNameForCreation = new javax.swing.JTextField();
         name = new javax.swing.JLabel();
         reset = new javax.swing.JButton();
         createEmployeeLabel = new javax.swing.JLabel();
@@ -48,7 +48,7 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
         txtUpdateCityName = new javax.swing.JTextField();
         btnUpdate = new javax.swing.JButton();
         createEmployeeLabel1 = new javax.swing.JLabel();
-        txtCommunityName = new javax.swing.JTextField();
+        txtCommunityNameForCreation = new javax.swing.JTextField();
         name2 = new javax.swing.JLabel();
         name3 = new javax.swing.JLabel();
         txtUpdateCommunityName = new javax.swing.JTextField();
@@ -64,9 +64,9 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtCityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCityNameForCreation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityNameActionPerformed(evt);
+                txtCityNameForCreationActionPerformed(evt);
             }
         });
 
@@ -152,9 +152,9 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
         createEmployeeLabel1.setText("View and Update Community");
         createEmployeeLabel1.setToolTipText("To create new employee");
 
-        txtCommunityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCommunityNameForCreation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCommunityNameActionPerformed(evt);
+                txtCommunityNameForCreationActionPerformed(evt);
             }
         });
 
@@ -201,11 +201,11 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
                 .addGap(130, 130, 130)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCityNameForCreation, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(name2)
                         .addGap(18, 18, 18)
-                        .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCommunityNameForCreation, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(reset)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -226,11 +226,11 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
                 .addGap(95, 95, 95)
-                .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCityNameForCreation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name2)
-                    .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCommunityNameForCreation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(save)
@@ -332,29 +332,37 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
         //        valEmailAddress.setText("");
         //        valPhoto.setText("");
         //        if(validation()){
-            String cityName = txtCityName.getText();
-            String communityName = txtCommunityName.getText();
+            String cityName = txtCityNameForCreation.getText();
+            String communityName = txtCommunityNameForCreation.getText();
             
             Community c = new Community(communityName, cityName);
             communityDirectory.add(c);
             
 
-            JOptionPane.showMessageDialog(this, "New Community Details was created ! ");
+             if (txtCityNameForCreation.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Fill City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            }
+            else if(txtCommunityNameForCreation.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Fill Community Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "New Community Details was created ! ");
+            }
             populateTable();
-            txtCityName.setText("");
-            txtCommunityName.setText("");
+            txtCityNameForCreation.setText("");
+            txtCommunityNameForCreation.setText("");
 
             //    }
     }//GEN-LAST:event_saveActionPerformed
 
-    private void txtCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameActionPerformed
+    private void txtCityNameForCreationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameForCreationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityNameActionPerformed
+    }//GEN-LAST:event_txtCityNameForCreationActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
-        txtCityName.setText("");
-        txtCommunityName.setText("");
+        txtCityNameForCreation.setText("");
+        txtCommunityNameForCreation.setText("");
 
         //Reset validation
         //        valName.setText("");
@@ -416,9 +424,9 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void txtCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameActionPerformed
+    private void txtCommunityNameForCreationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameForCreationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCommunityNameActionPerformed
+    }//GEN-LAST:event_txtCommunityNameForCreationActionPerformed
 
     private void txtUpdateCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateCommunityNameActionPerformed
         // TODO add your handling code here:
@@ -455,8 +463,8 @@ public class CreateCommunityJPanel extends javax.swing.JPanel {
     private javax.swing.JButton save;
     private javax.swing.JPanel splitWorkspace;
     private javax.swing.JTable tblEmployeeHistory;
-    private javax.swing.JTextField txtCityName;
-    private javax.swing.JTextField txtCommunityName;
+    private javax.swing.JTextField txtCityNameForCreation;
+    private javax.swing.JTextField txtCommunityNameForCreation;
     private javax.swing.JTextField txtUpdateCityName;
     private javax.swing.JTextField txtUpdateCommunityName;
     // End of variables declaration//GEN-END:variables

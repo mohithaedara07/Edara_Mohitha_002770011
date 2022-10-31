@@ -556,15 +556,7 @@ public class PatientJPanel extends javax.swing.JPanel {
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
 
-        //Reset validation
-        //        valName.setText("");
-        //        valEmployeeId.setText("");
-        //        valDate.setText("");
-        //        valTeamInfo.setText("");
-        //        valCellPhoneNumber.setText("");
-        //        valEmailAddress.setText("");
-        //        valPhoto.setText("");
-        //        if(validation()){
+       
         String name = txtName.getText();
         String username = txtUsername.getText();
         String password = txtPassword.getText();

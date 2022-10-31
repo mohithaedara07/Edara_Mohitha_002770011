@@ -37,10 +37,10 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         splitWorkspace = new javax.swing.JPanel();
         employeeId = new javax.swing.JLabel();
         save = new javax.swing.JButton();
-        txtCityName = new javax.swing.JTextField();
+        txtCityNameForHospital = new javax.swing.JTextField();
         name = new javax.swing.JLabel();
         reset = new javax.swing.JButton();
-        txtCommunityName = new javax.swing.JTextField();
+        txtCommunityNameForHospital = new javax.swing.JTextField();
         createEmployeeLabel = new javax.swing.JLabel();
         txtHospitalName = new javax.swing.JTextField();
         employeeId1 = new javax.swing.JLabel();
@@ -58,9 +58,9 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtCityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCityNameForHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityNameActionPerformed(evt);
+                txtCityNameForHospitalActionPerformed(evt);
             }
         });
 
@@ -73,9 +73,9 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtCommunityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCommunityNameForHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCommunityNameActionPerformed(evt);
+                txtCommunityNameForHospitalActionPerformed(evt);
             }
         });
 
@@ -121,8 +121,8 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
                                 .addComponent(employeeId, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addGap(18, 18, 18)
                             .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtCommunityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)))
                     .addContainerGap()))
         );
@@ -145,11 +145,11 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
                     .addGap(18, 18, 18)
                     .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(name)
-                        .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(employeeId)
-                        .addComponent(txtCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCommunityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(453, Short.MAX_VALUE)))
         );
 
@@ -204,29 +204,44 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         //        valEmailAddress.setText("");
         //        valPhoto.setText("");
         //        if(validation()){
-        String cityName = txtCityName.getText();
-        String communityName = txtCommunityName.getText();
+        String cityName = txtCityNameForHospital.getText();
+        String communityName = txtCommunityNameForHospital.getText();
         String hospitalName = txtHospitalName.getText();
 
         Hospital h = new Hospital(hospitalName, communityName, cityName);
 
         hospitalDirectory.add(h);
-        JOptionPane.showMessageDialog(this, "New Hospital Details was created ! ");
-        txtCityName.setText("");
-        txtCommunityName.setText("");
+         if (txtCityNameForHospital.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Enter City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            }
+            else if(txtCommunityNameForHospital.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Enter Community Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            }
+            else if(txtHospitalName.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Please Enter Hospital Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "New Hospital Details was created ! ");
+            }
+        
+        
+        
+        
+        txtCityNameForHospital.setText("");
+        txtCommunityNameForHospital.setText("");
         txtHospitalName.setText("");
 
         //    }
     }//GEN-LAST:event_saveActionPerformed
 
-    private void txtCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameActionPerformed
+    private void txtCityNameForHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameForHospitalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityNameActionPerformed
+    }//GEN-LAST:event_txtCityNameForHospitalActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
-        txtCityName.setText("");
-        txtCommunityName.setText("");
+        txtCityNameForHospital.setText("");
+        txtCommunityNameForHospital.setText("");
 
         txtHospitalName.setText("");
 
@@ -240,9 +255,9 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         //        valPhoto.setText("");
     }//GEN-LAST:event_resetActionPerformed
 
-    private void txtCommunityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameActionPerformed
+    private void txtCommunityNameForHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityNameForHospitalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCommunityNameActionPerformed
+    }//GEN-LAST:event_txtCommunityNameForHospitalActionPerformed
 
     private void txtHospitalNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalNameActionPerformed
         // TODO add your handling code here:
@@ -258,8 +273,8 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
     private javax.swing.JButton reset;
     private javax.swing.JButton save;
     private javax.swing.JPanel splitWorkspace;
-    private javax.swing.JTextField txtCityName;
-    private javax.swing.JTextField txtCommunityName;
+    private javax.swing.JTextField txtCityNameForHospital;
+    private javax.swing.JTextField txtCommunityNameForHospital;
     private javax.swing.JTextField txtHospitalName;
     // End of variables declaration//GEN-END:variables
 }

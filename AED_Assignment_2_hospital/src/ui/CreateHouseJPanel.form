@@ -155,22 +155,22 @@
                               <Group type="102" attributes="0">
                                   <Component id="name6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtStreetName" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtStreetNameForHouse" min="-2" pref="250" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="name4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtHouseNumber" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtHouseNumberForHouse" min="-2" pref="250" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="name" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtCityName" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtCityNameForHouse" min="-2" pref="250" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="name2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtCommunityName" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="txtCommunityNameForHouse" min="-2" pref="250" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="reset" min="-2" max="-2" attributes="0"/>
@@ -194,23 +194,23 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtCityName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCityNameForHouse" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="name2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCommunityName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCommunityNameForHouse" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="name4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtHouseNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHouseNumberForHouse" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="name6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtStreetName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtStreetNameForHouse" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -278,9 +278,9 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCityName">
+                <Component class="javax.swing.JTextField" name="txtCityNameForHouse">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCityNameActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCityNameForHouseActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="name">
@@ -405,9 +405,9 @@
                     <Property name="toolTipText" type="java.lang.String" value="To create new employee"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtCommunityName">
+                <Component class="javax.swing.JTextField" name="txtCommunityNameForHouse">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCommunityNameActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCommunityNameForHouseActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="name2">
@@ -425,9 +425,9 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUpdateCommunityNameActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtHouseNumber">
+                <Component class="javax.swing.JTextField" name="txtHouseNumberForHouse">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHouseNumberActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHouseNumberForHouseActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="name4">
@@ -435,9 +435,9 @@
                     <Property name="text" type="java.lang.String" value="House Number:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtStreetName">
+                <Component class="javax.swing.JTextField" name="txtStreetNameForHouse">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStreetNameActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStreetNameForHouseActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="name6">

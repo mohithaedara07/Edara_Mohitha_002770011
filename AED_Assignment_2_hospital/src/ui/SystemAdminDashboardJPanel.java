@@ -60,12 +60,6 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
         btnViewHospital = new javax.swing.JButton();
         btnCreateHospital = new javax.swing.JButton();
         splitWorkspace2 = new javax.swing.JPanel();
-        tabEncounters = new javax.swing.JPanel();
-        splitPaneDoctor2 = new javax.swing.JSplitPane();
-        splitNavigation3 = new javax.swing.JPanel();
-        btnViewDoctor2 = new javax.swing.JButton();
-        btnCreateDoctor2 = new javax.swing.JButton();
-        splitWorkspace3 = new javax.swing.JPanel();
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -289,78 +283,6 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Hospital", tabHospital);
 
-        btnViewDoctor2.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
-        btnViewDoctor2.setText("View Doctor");
-        btnViewDoctor2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewDoctor2ActionPerformed(evt);
-            }
-        });
-
-        btnCreateDoctor2.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
-        btnCreateDoctor2.setText("Create Doctor");
-        btnCreateDoctor2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateDoctor2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout splitNavigation3Layout = new javax.swing.GroupLayout(splitNavigation3);
-        splitNavigation3.setLayout(splitNavigation3Layout);
-        splitNavigation3Layout.setHorizontalGroup(
-            splitNavigation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(splitNavigation3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(splitNavigation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnCreateDoctor2, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                    .addComponent(btnViewDoctor2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        splitNavigation3Layout.setVerticalGroup(
-            splitNavigation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(splitNavigation3Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(btnCreateDoctor2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnViewDoctor2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(171, Short.MAX_VALUE))
-        );
-
-        splitPaneDoctor2.setLeftComponent(splitNavigation3);
-
-        splitWorkspace3.setBackground(new java.awt.Color(204, 204, 255));
-
-        javax.swing.GroupLayout splitWorkspace3Layout = new javax.swing.GroupLayout(splitWorkspace3);
-        splitWorkspace3.setLayout(splitWorkspace3Layout);
-        splitWorkspace3Layout.setHorizontalGroup(
-            splitWorkspace3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 882, Short.MAX_VALUE)
-        );
-        splitWorkspace3Layout.setVerticalGroup(
-            splitWorkspace3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 526, Short.MAX_VALUE)
-        );
-
-        splitPaneDoctor2.setRightComponent(splitWorkspace3);
-
-        javax.swing.GroupLayout tabEncountersLayout = new javax.swing.GroupLayout(tabEncounters);
-        tabEncounters.setLayout(tabEncountersLayout);
-        tabEncountersLayout.setHorizontalGroup(
-            tabEncountersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabEncountersLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(splitPaneDoctor2)
-                .addContainerGap())
-        );
-        tabEncountersLayout.setVerticalGroup(
-            tabEncountersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabEncountersLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(splitPaneDoctor2)
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Encounters", tabEncounters);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -414,22 +336,12 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
         splitPaneHospital.setRightComponent(createHospitalJPanel);
     }//GEN-LAST:event_btnCreateHospitalActionPerformed
 
-    private void btnViewDoctor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDoctor2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewDoctor2ActionPerformed
-
-    private void btnCreateDoctor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDoctor2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCreateDoctor2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreateDoctor;
-    private javax.swing.JButton btnCreateDoctor2;
     private javax.swing.JButton btnCreateHospital;
     private javax.swing.JButton btnCreatePatient;
     private javax.swing.JButton btnViewDoctor;
-    private javax.swing.JButton btnViewDoctor2;
     private javax.swing.JButton btnViewHospital;
     private javax.swing.JButton btnViewPatient;
     private javax.swing.JLabel jLabel1;
@@ -437,17 +349,13 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel splitNavigation;
     private javax.swing.JPanel splitNavigation1;
     private javax.swing.JPanel splitNavigation2;
-    private javax.swing.JPanel splitNavigation3;
     private javax.swing.JSplitPane splitPaneDoctor;
-    private javax.swing.JSplitPane splitPaneDoctor2;
     private javax.swing.JSplitPane splitPaneHospital;
     private javax.swing.JSplitPane splitPanePatient;
     private javax.swing.JPanel splitWorkspace;
     private javax.swing.JPanel splitWorkspace1;
     private javax.swing.JPanel splitWorkspace2;
-    private javax.swing.JPanel splitWorkspace3;
     private javax.swing.JPanel tabDoctor;
-    private javax.swing.JPanel tabEncounters;
     private javax.swing.JPanel tabHospital;
     private javax.swing.JPanel tabPatient;
     // End of variables declaration//GEN-END:variables

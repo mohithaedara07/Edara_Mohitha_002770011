@@ -44,6 +44,7 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
         splitNavigation = new javax.swing.JPanel();
         btnCreateCity = new javax.swing.JButton();
         splitWorkspace = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         tabCommunity = new javax.swing.JPanel();
         splitPaneCommunity = new javax.swing.JSplitPane();
         splitNavigation1 = new javax.swing.JPanel();
@@ -87,15 +88,23 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
 
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout splitWorkspaceLayout = new javax.swing.GroupLayout(splitWorkspace);
         splitWorkspace.setLayout(splitWorkspaceLayout);
         splitWorkspaceLayout.setHorizontalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 646, Short.MAX_VALUE)
+            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         splitWorkspaceLayout.setVerticalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         splitPaneCity.setRightComponent(splitWorkspace);
@@ -284,6 +293,7 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateCommunity;
     private javax.swing.JButton btnCreateHouse;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel splitNavigation;
     private javax.swing.JPanel splitNavigation1;

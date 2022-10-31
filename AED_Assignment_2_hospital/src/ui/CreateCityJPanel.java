@@ -38,7 +38,7 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         splitWorkspace = new javax.swing.JPanel();
         save = new javax.swing.JButton();
-        txtCityName = new javax.swing.JTextField();
+        txtCityNameForCreation = new javax.swing.JTextField();
         name = new javax.swing.JLabel();
         reset = new javax.swing.JButton();
         createEmployeeLabel = new javax.swing.JLabel();
@@ -61,9 +61,9 @@ public class CreateCityJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtCityName.addActionListener(new java.awt.event.ActionListener() {
+        txtCityNameForCreation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityNameActionPerformed(evt);
+                txtCityNameForCreationActionPerformed(evt);
             }
         });
 
@@ -190,7 +190,7 @@ public class CreateCityJPanel extends javax.swing.JPanel {
                             .addGap(123, 123, 123)
                             .addComponent(name)
                             .addGap(18, 18, 18)
-                            .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCityNameForCreation, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)))
                     .addContainerGap()))
         );
@@ -221,7 +221,7 @@ public class CreateCityJPanel extends javax.swing.JPanel {
                     .addGap(18, 18, 18)
                     .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(name)
-                        .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCityNameForCreation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(482, Short.MAX_VALUE)))
         );
 
@@ -276,27 +276,32 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         //        valEmailAddress.setText("");
         //        valPhoto.setText("");
         //        if(validation()){
-            String cityName = txtCityName.getText();
+            String cityName = txtCityNameForCreation.getText();
            
             City c = new City(cityName);
             cityDirectory.add(c);
 
             
+           if (txtCityNameForCreation.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please Fill City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
             JOptionPane.showMessageDialog(this, "New City Details was created ! ");
+        }
             populateTable();
-            txtCityName.setText("");
+            txtCityNameForCreation.setText("");
             
 
             //    }
     }//GEN-LAST:event_saveActionPerformed
 
-    private void txtCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameActionPerformed
+    private void txtCityNameForCreationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameForCreationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityNameActionPerformed
+    }//GEN-LAST:event_txtCityNameForCreationActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
         // TODO add your handling code here:
-        txtCityName.setText("");
+        txtCityNameForCreation.setText("");
         
         //Reset validation
         //        valName.setText("");
@@ -380,7 +385,7 @@ public class CreateCityJPanel extends javax.swing.JPanel {
     private javax.swing.JButton save;
     private javax.swing.JPanel splitWorkspace;
     private javax.swing.JTable tblEmployeeHistory;
-    private javax.swing.JTextField txtCityName;
+    private javax.swing.JTextField txtCityNameForCreation;
     private javax.swing.JTextField txtUpdateCityName;
     // End of variables declaration//GEN-END:variables
 }
