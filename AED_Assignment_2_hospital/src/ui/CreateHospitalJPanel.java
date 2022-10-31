@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Hospital;
 import model.HospitalDirectory;
@@ -45,11 +46,11 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         txtHospitalName = new javax.swing.JTextField();
         employeeId1 = new javax.swing.JLabel();
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(174, 186, 179));
 
         employeeId.setText("Community Name:");
 
-        save.setBackground(new java.awt.Color(255, 119, 0));
+        save.setBackground(new java.awt.Color(0, 153, 102));
         save.setForeground(new java.awt.Color(255, 255, 255));
         save.setText("Register");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +67,7 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
 
         name.setText("City Name:");
 
+        reset.setBackground(new java.awt.Color(255, 0, 51));
         reset.setText("Reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +82,7 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         });
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
-        createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        createEmployeeLabel.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createEmployeeLabel.setText("Create Hospital");
@@ -99,58 +101,53 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         splitWorkspaceLayout.setHorizontalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addComponent(employeeId1)
-                .addGap(18, 18, 18)
-                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                        .addComponent(reset)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtHospitalName, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
-                .addContainerGap(466, Short.MAX_VALUE))
-            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(createEmployeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                            .addGap(80, 80, 80)
-                            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(name, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(employeeId, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addGap(18, 18, 18)
-                            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtCommunityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtCityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 471, Short.MAX_VALUE)))
-                    .addContainerGap()))
+                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                                .addGap(135, 135, 135)
+                                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(employeeId)
+                                    .addComponent(employeeId1)
+                                    .addComponent(name))
+                                .addGap(66, 66, 66)
+                                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtCommunityNameForHospital, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtCityNameForHospital, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtHospitalName, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
+                            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                                .addGap(295, 295, 295)
+                                .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(62, 62, 62)
+                                .addComponent(reset)))
+                        .addGap(0, 217, Short.MAX_VALUE))
+                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(createEmployeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         splitWorkspaceLayout.setVerticalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(155, 155, 155)
+                .addContainerGap()
+                .addComponent(createEmployeeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(employeeId1)
-                    .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(txtCityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name))
+                .addGap(38, 38, 38)
+                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCommunityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(employeeId))
+                .addGap(45, 45, 45)
+                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(employeeId1))
+                .addGap(76, 76, 76)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(save)
                     .addComponent(reset))
-                .addContainerGap(381, Short.MAX_VALUE))
-            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(createEmployeeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(name)
-                        .addComponent(txtCityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(employeeId)
-                        .addComponent(txtCommunityNameForHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(453, Short.MAX_VALUE)))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -204,6 +201,7 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         //        valEmailAddress.setText("");
         //        valPhoto.setText("");
         //        if(validation()){
+        try {
         String cityName = txtCityNameForHospital.getText();
         String communityName = txtCommunityNameForHospital.getText();
         String hospitalName = txtHospitalName.getText();
@@ -211,19 +209,31 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         Hospital h = new Hospital(hospitalName, communityName, cityName);
 
         hospitalDirectory.add(h);
+        }
+         catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Please enter all values and try again");
+    
+            }
+             ArrayList message = null;
+                message = new ArrayList(0);
+        
          if (txtCityNameForHospital.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+                message.add("Please Enter City Name");
             }
-            else if(txtCommunityNameForHospital.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter Community Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+          if(txtCommunityNameForHospital.getText().isEmpty()){
+                message.add("Please Enter Community Name");
             }
-            else if(txtHospitalName.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter Hospital Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            if(txtHospitalName.getText().isEmpty()){
+                message.add("Please Enter Hospital Name");
             }
-            else{
+           if(!(message.isEmpty())){
+            JOptionPane.showMessageDialog(this, message.toArray());
+            message.clear();
+            }
+        else{
                 JOptionPane.showMessageDialog(this, "New Hospital Details was created ! ");
             }
-        
+             
         
         
         

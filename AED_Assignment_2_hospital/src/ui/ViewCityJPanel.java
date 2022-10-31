@@ -43,6 +43,8 @@ public class ViewCityJPanel extends javax.swing.JPanel {
         name = new javax.swing.JLabel();
         txtCityName = new javax.swing.JTextField();
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+
         createEmployeeLabel.setBackground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));

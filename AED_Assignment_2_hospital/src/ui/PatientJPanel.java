@@ -119,6 +119,8 @@ public class PatientJPanel extends javax.swing.JPanel {
         txtDisease = new javax.swing.JTextField();
         emailAddress1 = new javax.swing.JLabel();
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Patient Dashboard");
@@ -126,6 +128,8 @@ public class PatientJPanel extends javax.swing.JPanel {
         patientTabs.setBackground(new java.awt.Color(204, 0, 51));
         patientTabs.setForeground(new java.awt.Color(255, 255, 255));
         patientTabs.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+
+        tabDoctor.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel2.setText("Select a community :");
 

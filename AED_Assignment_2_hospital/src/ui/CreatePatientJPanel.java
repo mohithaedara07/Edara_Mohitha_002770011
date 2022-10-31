@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Patient;
 import model.PatientDirectory;
@@ -265,15 +266,9 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
 
-        //Reset validation
-        //        valName.setText("");
-        //        valEmployeeId.setText("");
-        //        valDate.setText("");
-        //        valTeamInfo.setText("");
-        //        valCellPhoneNumber.setText("");
-        //        valEmailAddress.setText("");
-        //        valPhoto.setText("");
-        //        if(validation()){
+           
+        
+        try {
             String name = txtPatientName.getText();
             String username = txtPatientUserName.getText();
             String password = txtPatientPassword.getText();
@@ -288,29 +283,37 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
             Patient p = new Patient(disease, name, age, gender, emailAddress, cellPhoneNumber, username, password);
 
             patientDirectory.add(p);
-            
+            }
+             
+             catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Please enter all values and try again");
+    
+            }
+         ArrayList message = null;
+                message = new ArrayList(0);
             if (txtPatientName.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter Patient Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+                message.add("Please Enter Patient Name");
             }
-            else if (txtPatientEmail.getText().isEmpty() ){
-                JOptionPane.showMessageDialog(this, "Please Enter Patient Email" , "Warning", JOptionPane.ERROR_MESSAGE);
+           if (txtPatientEmail.getText().isEmpty() ){
+                message.add("Please Enter Patient Email");
             }
-            else if(!txtPatientEmail.getText().matches(emailPattern)){
-                JOptionPane.showMessageDialog(this, "Enter valid Email", "Warning", JOptionPane.ERROR_MESSAGE);
+            
+            if (txtPatientUserName.getText().isEmpty()){
+                message.add("Please Enter Patient's Username ");
             }
-            else if (txtPatientUserName.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter Patient's Username " , "Warning", JOptionPane.ERROR_MESSAGE);
+           if (txtPatientPassword.getText().isEmpty()){
+                message.add("Please Enter Patient's Password ");
             }
-            else if (txtPatientPassword.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter Patient's Password " , "Warning", JOptionPane.ERROR_MESSAGE);
+           if (txtPatientDisease.getText().isEmpty()){
+               message.add("Please Enter Disease ");
             }
-            else if (txtPatientDisease.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter Disease " , "Warning", JOptionPane.ERROR_MESSAGE);
+             if(!(message.isEmpty())){
+            JOptionPane.showMessageDialog(this, message.toArray());
+            message.clear();
             }
-            else{
+        else{
                 JOptionPane.showMessageDialog(this, "New Patient Details was created ! ");
             }
-            
             txtPatientName.setText("");
             txtPatientUserName.setText("");
             txtAge.setValue(18);

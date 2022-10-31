@@ -50,19 +50,29 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
         splitNavigation1 = new javax.swing.JPanel();
         btnCreateCommunity = new javax.swing.JButton();
         splitWorkspace1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         tabHouse = new javax.swing.JPanel();
         splitPaneHouse = new javax.swing.JSplitPane();
         splitNavigation2 = new javax.swing.JPanel();
         btnCreateHouse = new javax.swing.JButton();
         splitWorkspace2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        setBackground(new java.awt.Color(255, 204, 204));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel1.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Community Admin Dashboard");
 
+        jTabbedPane1.setBackground(new java.awt.Color(204, 204, 0));
         jTabbedPane1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
 
-        btnCreateCity.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
+        splitNavigation.setBackground(new java.awt.Color(204, 204, 255));
+
+        btnCreateCity.setBackground(new java.awt.Color(204, 255, 204));
+        btnCreateCity.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         btnCreateCity.setText("Create City");
         btnCreateCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,30 +91,29 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
             .addGroup(splitNavigationLayout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addComponent(btnCreateCity, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         splitPaneCity.setLeftComponent(splitNavigation);
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(143, 58, 91));
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/j8.jpeg"))); // NOI18N
 
         javax.swing.GroupLayout splitWorkspaceLayout = new javax.swing.GroupLayout(splitWorkspace);
         splitWorkspace.setLayout(splitWorkspaceLayout);
         splitWorkspaceLayout.setHorizontalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(280, 280, 280)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                .addGap(0, 56, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         splitWorkspaceLayout.setVerticalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                .addContainerGap(64, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         splitPaneCity.setRightComponent(splitWorkspace);
@@ -128,7 +137,10 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("City", tabCity);
 
-        btnCreateCommunity.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
+        splitNavigation1.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreateCommunity.setBackground(new java.awt.Color(204, 255, 204));
+        btnCreateCommunity.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         btnCreateCommunity.setText("Create Community");
         btnCreateCommunity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,22 +161,30 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
             .addGroup(splitNavigation1Layout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addComponent(btnCreateCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         splitPaneCommunity.setLeftComponent(splitNavigation1);
 
-        splitWorkspace1.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace1.setBackground(new java.awt.Color(204, 129, 61));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/j9.jpeg"))); // NOI18N
 
         javax.swing.GroupLayout splitWorkspace1Layout = new javax.swing.GroupLayout(splitWorkspace1);
         splitWorkspace1.setLayout(splitWorkspace1Layout);
         splitWorkspace1Layout.setHorizontalGroup(
             splitWorkspace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 646, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspace1Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
         );
         splitWorkspace1Layout.setVerticalGroup(
             splitWorkspace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGroup(splitWorkspace1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         splitPaneCommunity.setRightComponent(splitWorkspace1);
@@ -188,7 +208,10 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Community", tabCommunity);
 
-        btnCreateHouse.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
+        splitNavigation2.setBackground(new java.awt.Color(255, 204, 204));
+
+        btnCreateHouse.setBackground(new java.awt.Color(255, 204, 51));
+        btnCreateHouse.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         btnCreateHouse.setText("Create House");
         btnCreateHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,31 +223,40 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
         splitNavigation2.setLayout(splitNavigation2Layout);
         splitNavigation2Layout.setHorizontalGroup(
             splitNavigation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(splitNavigation2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitNavigation2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCreateHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addContainerGap())
         );
         splitNavigation2Layout.setVerticalGroup(
             splitNavigation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitNavigation2Layout.createSequentialGroup()
-                .addGap(179, 179, 179)
+                .addGap(194, 194, 194)
                 .addComponent(btnCreateHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(230, Short.MAX_VALUE))
         );
 
         splitPaneHouse.setLeftComponent(splitNavigation2);
 
-        splitWorkspace2.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace2.setBackground(new java.awt.Color(0, 153, 51));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/j11.jpeg"))); // NOI18N
 
         javax.swing.GroupLayout splitWorkspace2Layout = new javax.swing.GroupLayout(splitWorkspace2);
         splitWorkspace2.setLayout(splitWorkspace2Layout);
         splitWorkspace2Layout.setHorizontalGroup(
             splitWorkspace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 646, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspace2Layout.createSequentialGroup()
+                .addContainerGap(84, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         splitWorkspace2Layout.setVerticalGroup(
             splitWorkspace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGroup(splitWorkspace2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         splitPaneHouse.setRightComponent(splitWorkspace2);
@@ -259,8 +291,8 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jTabbedPane1))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -294,6 +326,8 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateHouse;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel splitNavigation;
     private javax.swing.JPanel splitNavigation1;

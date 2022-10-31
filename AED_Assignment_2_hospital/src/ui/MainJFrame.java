@@ -99,7 +99,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        controlPanel.setBackground(new java.awt.Color(102, 0, 255));
+        controlPanel.setBackground(new java.awt.Color(255, 204, 153));
         controlPanel.setForeground(new java.awt.Color(51, 51, 255));
 
         btnLogout.setBackground(new java.awt.Color(255, 255, 204));
@@ -111,7 +111,7 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         lblWelcomeText.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblWelcomeText.setForeground(new java.awt.Color(255, 255, 255));
+        lblWelcomeText.setForeground(new java.awt.Color(51, 51, 255));
         lblWelcomeText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblWelcomeText.setText("Welcome");
 
@@ -138,7 +138,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPane.setLeftComponent(controlPanel);
 
-        workspacePanel.setBackground(new java.awt.Color(255, 204, 204));
+        workspacePanel.setBackground(new java.awt.Color(151, 185, 255));
 
         labelHospitalManagementSystem.setBackground(new java.awt.Color(153, 153, 153));
         labelHospitalManagementSystem.setFont(new java.awt.Font("Helvetica Neue", 2, 14)); // NOI18N
@@ -148,10 +148,10 @@ public class MainJFrame extends javax.swing.JFrame {
         labelHospitalManagementSystem.setToolTipText("To create new employee");
 
         labelHospitalManagementSystem1.setBackground(new java.awt.Color(153, 153, 153));
-        labelHospitalManagementSystem1.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
+        labelHospitalManagementSystem1.setFont(new java.awt.Font("Myanmar MN", 1, 36)); // NOI18N
         labelHospitalManagementSystem1.setForeground(new java.awt.Color(0, 71, 119));
         labelHospitalManagementSystem1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelHospitalManagementSystem1.setText("Hospital Management System");
+        labelHospitalManagementSystem1.setText("LongWood Hospital Management System");
         labelHospitalManagementSystem1.setToolTipText("To create new employee");
 
         txtUserName.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
@@ -232,7 +232,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workspacePanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(236, 236, 236))
+                .addGap(160, 160, 160))
         );
         workspacePanelLayout.setVerticalGroup(
             workspacePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,9 +255,9 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(labelHospitalManagementSystem2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
         splitPane.setRightComponent(workspacePanel);
@@ -270,7 +270,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1062, Short.MAX_VALUE)
+            .addComponent(splitPane)
         );
 
         pack();

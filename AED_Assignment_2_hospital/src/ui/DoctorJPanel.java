@@ -109,6 +109,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
         btnEdit = new javax.swing.JButton();
         Update = new javax.swing.JButton();
 
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Doctor Dashboard");
@@ -116,6 +118,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
         createEncounterTab.setBackground(new java.awt.Color(204, 0, 51));
         createEncounterTab.setForeground(new java.awt.Color(255, 255, 255));
         createEncounterTab.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+
+        tabCreateEncounter.setBackground(new java.awt.Color(255, 255, 204));
 
         jLabel2.setText("Select a Patient :");
 
@@ -135,6 +139,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
 
         jLabel7.setText("Choose a date:");
 
+        btnBook.setBackground(new java.awt.Color(0, 153, 51));
         btnBook.setText("Book");
         btnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

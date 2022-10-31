@@ -48,24 +48,34 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
         btnViewPatient = new javax.swing.JButton();
         btnCreatePatient = new javax.swing.JButton();
         splitWorkspace = new javax.swing.JPanel();
+        splitWorkspace3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         tabDoctor = new javax.swing.JPanel();
         splitPaneDoctor = new javax.swing.JSplitPane();
         splitNavigation1 = new javax.swing.JPanel();
         btnViewDoctor = new javax.swing.JButton();
         btnCreateDoctor = new javax.swing.JButton();
         splitWorkspace1 = new javax.swing.JPanel();
+        splitWorkspace4 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         tabHospital = new javax.swing.JPanel();
         splitPaneHospital = new javax.swing.JSplitPane();
         splitNavigation2 = new javax.swing.JPanel();
         btnViewHospital = new javax.swing.JButton();
         btnCreateHospital = new javax.swing.JButton();
         splitWorkspace2 = new javax.swing.JPanel();
+        splitWorkspace5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(255, 255, 0));
+        jLabel1.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("System Admin Dashboard");
 
+        jTabbedPane1.setBackground(new java.awt.Color(255, 153, 51));
         jTabbedPane1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+
+        splitNavigation.setBackground(new java.awt.Color(204, 204, 255));
 
         btnViewPatient.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
         btnViewPatient.setText("View Patient");
@@ -100,22 +110,54 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
                 .addComponent(btnCreatePatient, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(btnViewPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         splitPanePatient.setLeftComponent(splitNavigation);
 
         splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
 
+        splitWorkspace3.setBackground(new java.awt.Color(204, 255, 153));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/WhatsApp Image 2022-10-30 at 11.13.18 PM.jpeg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+
+        javax.swing.GroupLayout splitWorkspace3Layout = new javax.swing.GroupLayout(splitWorkspace3);
+        splitWorkspace3.setLayout(splitWorkspace3Layout);
+        splitWorkspace3Layout.setHorizontalGroup(
+            splitWorkspace3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(splitWorkspace3Layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(184, Short.MAX_VALUE))
+        );
+        splitWorkspace3Layout.setVerticalGroup(
+            splitWorkspace3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(splitWorkspace3Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout splitWorkspaceLayout = new javax.swing.GroupLayout(splitWorkspace);
         splitWorkspace.setLayout(splitWorkspaceLayout);
         splitWorkspaceLayout.setHorizontalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 882, Short.MAX_VALUE)
+            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(splitWorkspace3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         splitWorkspaceLayout.setVerticalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 526, Short.MAX_VALUE)
+            .addGap(0, 540, Short.MAX_VALUE)
+            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(splitWorkspace3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         splitPanePatient.setRightComponent(splitWorkspace);
@@ -138,6 +180,8 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
         );
 
         jTabbedPane1.addTab("Patient", tabPatient);
+
+        splitNavigation1.setBackground(new java.awt.Color(204, 255, 204));
 
         btnViewDoctor.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
         btnViewDoctor.setText("View Doctor");
@@ -172,22 +216,51 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
                 .addComponent(btnCreateDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(btnViewDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         splitPaneDoctor.setLeftComponent(splitNavigation1);
 
         splitWorkspace1.setBackground(new java.awt.Color(204, 204, 255));
 
+        splitWorkspace4.setBackground(new java.awt.Color(153, 204, 255));
+
+        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/j1.jpeg"))); // NOI18N
+
+        javax.swing.GroupLayout splitWorkspace4Layout = new javax.swing.GroupLayout(splitWorkspace4);
+        splitWorkspace4.setLayout(splitWorkspace4Layout);
+        splitWorkspace4Layout.setHorizontalGroup(
+            splitWorkspace4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspace4Layout.createSequentialGroup()
+                .addContainerGap(204, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(126, 126, 126))
+        );
+        splitWorkspace4Layout.setVerticalGroup(
+            splitWorkspace4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(splitWorkspace4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout splitWorkspace1Layout = new javax.swing.GroupLayout(splitWorkspace1);
         splitWorkspace1.setLayout(splitWorkspace1Layout);
         splitWorkspace1Layout.setHorizontalGroup(
             splitWorkspace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 882, Short.MAX_VALUE)
+            .addGroup(splitWorkspace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(splitWorkspace4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         splitWorkspace1Layout.setVerticalGroup(
             splitWorkspace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 526, Short.MAX_VALUE)
+            .addGap(0, 540, Short.MAX_VALUE)
+            .addGroup(splitWorkspace1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(splitWorkspace1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(splitWorkspace4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(36, Short.MAX_VALUE)))
         );
 
         splitPaneDoctor.setRightComponent(splitWorkspace1);
@@ -210,6 +283,8 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
         );
 
         jTabbedPane1.addTab("Doctor", tabDoctor);
+
+        splitNavigation2.setBackground(new java.awt.Color(255, 204, 204));
 
         btnViewHospital.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
         btnViewHospital.setText("View Hospital");
@@ -244,22 +319,50 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
                 .addComponent(btnCreateHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(btnViewHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         splitPaneHospital.setLeftComponent(splitNavigation2);
 
         splitWorkspace2.setBackground(new java.awt.Color(204, 204, 255));
 
+        splitWorkspace5.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/j13.jpeg"))); // NOI18N
+
+        javax.swing.GroupLayout splitWorkspace5Layout = new javax.swing.GroupLayout(splitWorkspace5);
+        splitWorkspace5.setLayout(splitWorkspace5Layout);
+        splitWorkspace5Layout.setHorizontalGroup(
+            splitWorkspace5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspace5Layout.createSequentialGroup()
+                .addContainerGap(199, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(145, 145, 145))
+        );
+        splitWorkspace5Layout.setVerticalGroup(
+            splitWorkspace5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(splitWorkspace5Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout splitWorkspace2Layout = new javax.swing.GroupLayout(splitWorkspace2);
         splitWorkspace2.setLayout(splitWorkspace2Layout);
         splitWorkspace2Layout.setHorizontalGroup(
             splitWorkspace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 882, Short.MAX_VALUE)
+            .addGroup(splitWorkspace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(splitWorkspace5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         splitWorkspace2Layout.setVerticalGroup(
             splitWorkspace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 526, Short.MAX_VALUE)
+            .addGap(0, 540, Short.MAX_VALUE)
+            .addGroup(splitWorkspace2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(splitWorkspace2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(splitWorkspace5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         splitPaneHospital.setRightComponent(splitWorkspace2);
@@ -345,6 +448,9 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnViewHospital;
     private javax.swing.JButton btnViewPatient;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel splitNavigation;
     private javax.swing.JPanel splitNavigation1;
@@ -355,6 +461,9 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel splitWorkspace;
     private javax.swing.JPanel splitWorkspace1;
     private javax.swing.JPanel splitWorkspace2;
+    private javax.swing.JPanel splitWorkspace3;
+    private javax.swing.JPanel splitWorkspace4;
+    private javax.swing.JPanel splitWorkspace5;
     private javax.swing.JPanel tabDoctor;
     private javax.swing.JPanel tabHospital;
     private javax.swing.JPanel tabPatient;

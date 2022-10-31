@@ -72,7 +72,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         employeeId.setText("Username:");
 
-        save.setBackground(new java.awt.Color(255, 119, 0));
+        save.setBackground(new java.awt.Color(0, 153, 102));
         save.setForeground(new java.awt.Color(255, 255, 255));
         save.setText("Register");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +91,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         name.setText("Name:");
 
+        reset.setBackground(new java.awt.Color(255, 0, 0));
         reset.setText("Reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

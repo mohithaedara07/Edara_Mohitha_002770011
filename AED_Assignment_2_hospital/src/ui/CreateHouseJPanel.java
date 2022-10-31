@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.House;
@@ -62,9 +63,9 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         name8 = new javax.swing.JLabel();
         txtUpdateStreetName = new javax.swing.JTextField();
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(153, 102, 0));
 
-        save.setBackground(new java.awt.Color(255, 119, 0));
+        save.setBackground(new java.awt.Color(0, 153, 51));
         save.setForeground(new java.awt.Color(255, 255, 255));
         save.setText("Register");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +82,7 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
 
         name.setText("City Name:");
 
+        reset.setBackground(new java.awt.Color(255, 0, 51));
         reset.setText("Reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,8 +91,8 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         });
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
-        createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));
+        createEmployeeLabel.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
+        createEmployeeLabel.setForeground(new java.awt.Color(255, 255, 204));
         createEmployeeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createEmployeeLabel.setText("Add New House");
         createEmployeeLabel.setToolTipText("To create new employee");
@@ -156,7 +158,7 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
 
         createEmployeeLabel1.setBackground(new java.awt.Color(153, 153, 153));
         createEmployeeLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        createEmployeeLabel1.setForeground(new java.awt.Color(0, 71, 119));
+        createEmployeeLabel1.setForeground(new java.awt.Color(255, 255, 204));
         createEmployeeLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createEmployeeLabel1.setText("View and Update House");
         createEmployeeLabel1.setToolTipText("To create new employee");
@@ -214,50 +216,37 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
         splitWorkspaceLayout.setHorizontalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(126, Short.MAX_VALUE)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(createEmployeeLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
-                        .addGap(0, 120, Short.MAX_VALUE)
-                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
-                                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnRead)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(33, 33, 33))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
-                                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                                        .addComponent(name1)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtUpdateCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                                        .addComponent(name8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtUpdateStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                                        .addComponent(name7)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtUpdateHouseNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                                        .addComponent(name3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtUpdateCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(30, 30, 30)
-                                .addComponent(btnUpdate)
-                                .addGap(214, 214, 214)))))
-                .addContainerGap())
+                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRead)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                                .addComponent(name1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtUpdateCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                                .addComponent(name8)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtUpdateStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                                .addComponent(name7)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtUpdateHouseNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                                .addComponent(name3)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtUpdateCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(30, 30, 30)
+                        .addComponent(btnUpdate)
+                        .addGap(220, 220, 220))))
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
                 .addGap(130, 130, 130)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                        .addComponent(name6)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtStreetNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                        .addComponent(name4)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtHouseNumberForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(splitWorkspaceLayout.createSequentialGroup()
                         .addComponent(name)
                         .addGap(18, 18, 18)
@@ -266,43 +255,53 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
                         .addComponent(name2)
                         .addGap(18, 18, 18)
                         .addComponent(txtCommunityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                        .addComponent(reset)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(createEmployeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                        .addComponent(name4)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtHouseNumberForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(reset)
+                            .addComponent(name6))
+                        .addGap(18, 18, 18)
+                        .addComponent(txtStreetNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(107, 107, 107))
+            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(createEmployeeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(splitWorkspaceLayout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(createEmployeeLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         splitWorkspaceLayout.setVerticalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(95, 95, 95)
+                .addContainerGap()
+                .addComponent(createEmployeeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(name))
+                    .addComponent(name)
+                    .addComponent(txtHouseNumberForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name2)
-                    .addComponent(txtCommunityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name4)
-                    .addComponent(txtHouseNumberForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(7, 7, 7)
-                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name6)
-                    .addComponent(txtStreetNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txtCommunityNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtStreetNameForHouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name6))
+                .addGap(36, 36, 36)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(save)
                     .addComponent(reset))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(createEmployeeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRead)
@@ -328,11 +327,6 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
                     .addComponent(name8)
                     .addComponent(txtUpdateStreetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10))
-            .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(createEmployeeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(523, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -398,7 +392,7 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
 
-        
+        try{
         String cityName = txtCityNameForHouse.getText();
         String communityName = txtCommunityNameForHouse.getText();
         int houseNumber = Integer.parseInt(txtHouseNumberForHouse.getText());
@@ -406,22 +400,33 @@ public class CreateHouseJPanel extends javax.swing.JPanel {
 
         House c = new House(streetName, houseNumber, communityName, cityName);
         houseDirectory.add(c);
+        }
+        catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Please enter all values and try again");
+    
+            }
+             ArrayList message = null;
+                message = new ArrayList(0);
 
         if (txtCityNameForHouse.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+                message.add("Please Enter City Name");
         }
-        else if(txtCommunityNameForHouse.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Fill Community Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+         if(txtCommunityNameForHouse.getText().isEmpty()){
+                message.add("Please Fill Community Name");
         }
-        else if(txtHouseNumberForHouse.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter House Number" , "Warning", JOptionPane.ERROR_MESSAGE);
+        if(txtHouseNumberForHouse.getText().isEmpty()){
+                message.add("Please Enter House Number");
         }
-        else if(txtStreetNameForHouse.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please Enter House Number" , "Warning", JOptionPane.ERROR_MESSAGE);
+        if(txtStreetNameForHouse.getText().isEmpty()){
+                message.add("Please Enter House Number");
         }
+        if(!(message.isEmpty())){
+            JOptionPane.showMessageDialog(this, message.toArray());
+            message.clear();
+            }
         else{
-                JOptionPane.showMessageDialog(this, "New House Details was created ! ");
-        }
+                JOptionPane.showMessageDialog(this, "New Hospital Details was created ! ");
+            }
         populateTable();
         txtCityNameForHouse.setText("");
         txtCommunityNameForHouse.setText("");

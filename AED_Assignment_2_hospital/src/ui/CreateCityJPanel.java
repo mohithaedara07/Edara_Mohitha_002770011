@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.City;
@@ -50,9 +51,9 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         createEmployeeLabel1 = new javax.swing.JLabel();
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(225, 131, 175));
 
-        save.setBackground(new java.awt.Color(255, 119, 0));
+        save.setBackground(new java.awt.Color(0, 204, 102));
         save.setForeground(new java.awt.Color(255, 255, 255));
         save.setText("Register");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +70,7 @@ public class CreateCityJPanel extends javax.swing.JPanel {
 
         name.setText("City Name:");
 
+        reset.setBackground(new java.awt.Color(255, 0, 0));
         reset.setText("Reset");
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +79,7 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         });
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
-        createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        createEmployeeLabel.setFont(new java.awt.Font("Myanmar MN", 1, 24)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createEmployeeLabel.setText("Add New City");
@@ -154,33 +156,31 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         splitWorkspaceLayout.setHorizontalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(207, 207, 207)
-                .addComponent(reset)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(createEmployeeLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
                         .addGap(0, 34, Short.MAX_VALUE)
-                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnRead)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33))
-                    .addComponent(createEmployeeLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnRead)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(33, 33, 33))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                                .addComponent(name1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtUpdateCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(299, 299, 299))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
+                                .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(90, 90, 90)
+                                .addComponent(reset)
+                                .addGap(86, 86, 86))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
-                .addContainerGap(301, Short.MAX_VALUE)
-                .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(btnUpdate)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, splitWorkspaceLayout.createSequentialGroup()
-                        .addComponent(name1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtUpdateCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(299, 299, 299))
+                .addContainerGap(444, Short.MAX_VALUE)
+                .addComponent(btnUpdate)
+                .addGap(416, 416, 416))
             .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(splitWorkspaceLayout.createSequentialGroup()
                     .addContainerGap()
@@ -197,11 +197,11 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         splitWorkspaceLayout.setVerticalGroup(
             splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(splitWorkspaceLayout.createSequentialGroup()
-                .addGap(141, 141, 141)
+                .addGap(94, 94, 94)
                 .addGroup(splitWorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(save)
                     .addComponent(reset))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(53, 53, 53)
                 .addComponent(createEmployeeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -267,27 +267,29 @@ public class CreateCityJPanel extends javax.swing.JPanel {
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
 
-        //Reset validation
-        //        valName.setText("");
-        //        valEmployeeId.setText("");
-        //        valDate.setText("");
-        //        valTeamInfo.setText("");
-        //        valCellPhoneNumber.setText("");
-        //        valEmailAddress.setText("");
-        //        valPhoto.setText("");
-        //        if(validation()){
+     
+        try {
             String cityName = txtCityNameForCreation.getText();
            
             City c = new City(cityName);
             cityDirectory.add(c);
-
-            
+            }
+         catch(Exception ex){
+            JOptionPane.showMessageDialog(this, "Please enter all values and try again");
+    
+            }
+             ArrayList message = null;
+                message = new ArrayList(0);
            if (txtCityNameForCreation.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please Fill City Name" , "Warning", JOptionPane.ERROR_MESSAGE);
+            message.add("Please Fill City Name");
         }
+        if(!(message.isEmpty())){
+            JOptionPane.showMessageDialog(this, message.toArray());
+            message.clear();
+            }
         else{
-            JOptionPane.showMessageDialog(this, "New City Details was created ! ");
-        }
+                JOptionPane.showMessageDialog(this, "New Hospital Details was created ! ");
+            }
             populateTable();
             txtCityNameForCreation.setText("");
             
