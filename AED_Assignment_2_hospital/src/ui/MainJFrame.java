@@ -58,13 +58,14 @@ public class MainJFrame extends javax.swing.JFrame {
         hospitalAdmin = new Admin("Hospital", "HospitalAdmin",  22,  "Male",  "asd@gmail.com",  123123,  "hosadmin",  "hosadmin");
         communityAdmin = new Admin("Community", "CommunityAdmin",  22,  "Male",  "asd@gmail.com",  123123,  "comadmin",  "comadmin");
         
-        patientDirectory.add(new Patient("Flu", "xyz", 22, "Male", "ass@gmai.com", 123123, "xyz", "xyz"));
+        patientDirectory.add(new Patient("Flu", "xyz", 22, "Male", "ass@gmai.com", 123123, "patient", "xyz"));
         
-        doctorDirectory.add(new Doctor("Heart", new Community("Boylston", "Boston"), "John", 22, "Male", "asdsa", 123123, "abc", "abc"));
+        doctorDirectory.add(new Doctor("Heart", new Community("Boylston", "Boston"), "John", 22, "Male", "asdsa", 123123, "john", "abc"));
+        doctorDirectory.add(new Doctor("Heart", new Community("Brooklyn", "NewYork"), "Jason", 22, "Male", "asdsa", 123123, "jason", "abc"));
         
         communityDirectory.add(new Community("Boylston", "Boston"));
-        communityDirectory.add(new Community("xyz", "Bangalore"));
-        communityDirectory.add(new Community("abc", "Chennai"));
+        communityDirectory.add(new Community("Brooklyn", "NewYork"));
+        communityDirectory.add(new Community("Greenwood", "Kalmazoo"));
         
         
         
